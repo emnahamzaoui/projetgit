@@ -1,0 +1,9 @@
+public class Somme
+{
+private int a;
+private int b;
+int s;
+
+s:=a+b;
+System.out.println("la somme est "+ s);
+}
