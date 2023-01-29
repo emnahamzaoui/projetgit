@@ -1,0 +1,10 @@
+public class somme {
+    public static void main(String[] args) {
+
+        int a=5;
+        int b=3;
+        int s;
+        s = a + b;
+        System.out.println("la somme est " + s);
+    }
+}
