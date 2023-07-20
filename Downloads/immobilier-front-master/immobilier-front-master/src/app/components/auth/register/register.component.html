@@ -1,0 +1,22 @@
+<div class=" flex justify-center items-center mt-4 align-middle">
+  <div class="p-12 w-[30rem] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-900 dark:border-gray-800">
+    <form [formGroup]="form" class="max-w-md mx-auto">
+      <!-- ... -->
+      <ng-container *ngFor="let control of getControls()">
+        <div class="mb-6">
+          <label [for]="control" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{ control
+            }}</label>
+          <input [type]="control === 'password' || control === 'confirmPassword' ? 'password' : 'text'"
+            [formControlName]="control" [id]="control"
+            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+            required>
+          <div class="text-red-500 text-sm mt-1" *ngIf="form.get(control).invalid && form.get(control).touched">
+            {{ this.getErrorMessage(form.get(control)) }}
+          </div>
+        </div>
+      </ng-container>
+      <!-- ... -->
+    </form>
+
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<form [formGroup]="feedback" (ngSubmit)="onSubmit()">
+    <label>
+      ID:
+      <input type="text" formControlName="id">
+    </label>
+  
+    <label>
+      Description:
+      <input type="text" formControlName="description">
+    </label>
+  
+    <label>
+      Screen Type:
+      <input type="text" formControlName="screen_type">
+    </label>
+  
+    <label>
+      Dislike:
+      <input type="number" formControlName="dislike">
+    </label>
+  
+    <label>
+      Likes:
+      <input type="number" formControlName="likes">
+    </label>
+  
+    <label>
+      Rating:
+      <input type="number" formControlName="rating">
+    </label>
+  
+    <button type="submit">Submit</button>
+  </form>
